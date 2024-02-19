@@ -3,9 +3,9 @@
 // }
 let SeatCount = 40;
 let totalSetCount = 0;
-let phoneN = 0; 
+let phoneN = 0;
 
-function HIDE(){
+function HIDE() {
     let Hi = document.getElementById('HIDEEE');
     // Hi.classList.add('bg-red-500');
     Hi.classList.add('hidden');
@@ -13,7 +13,7 @@ function HIDE(){
     console.log(Hi)
 }
 
-function Show(){
+function Show() {
     let show = document.getElementById('show');
     show.classList.remove('hidden');
 }
@@ -22,9 +22,9 @@ function inputValues() {
     let phoneNum = document.getElementById('phone-number').value;
     let phoneNums = parseInt(phoneNum);
     if (typeof phoneNums === 'number' && isNaN(phoneNums) == false) {
-        
+
         phoneN++;
-        
+
     }
 
     if (totalSetCount > 0 && phoneN > 0) {
@@ -94,29 +94,20 @@ for (let set of setAdd) {
 
         if (totalSetCount > 0 && phoneN > 0) {
             document.getElementById('next-btn').disabled = false;
-    
+
         }
 
         // let totalCost = document.getElementById('Total-cost');
         setInnerText('Total-cost', totalCost);
         setInnerText('Grand-Total-cost', totalCost);
 
-        // let btn = document.getElementById('next-btn');
-        // console.log('jfka');
 
-        // if (totalSetCount === 0) {
-        //     document.getElementById('next-btn').disabled = true;
-        //     console.log('jf')
-        // }
-
-
-
-        // console.log(setInnerT)
     })
 
 }
 
 document.getElementById('next-btn').disabled = true;
+document.getElementById('Couple-apply').disabled = true;
 
 
 
@@ -124,6 +115,8 @@ document.getElementById('next-btn').disabled = true;
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
+
+
 
 
 
